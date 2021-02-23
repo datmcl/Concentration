@@ -15,6 +15,8 @@
 		7F65E2E925E40C56008451FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F65E2E725E40C56008451FE /* LaunchScreen.storyboard */; };
 		7F65E2F425E40C57008451FE /* ConcentrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F65E2F325E40C57008451FE /* ConcentrationTests.swift */; };
 		7F65E2FF25E40C57008451FE /* ConcentrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F65E2FE25E40C57008451FE /* ConcentrationUITests.swift */; };
+		7F73993125E4F6D500BACB14 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F73993025E4F6D500BACB14 /* Card.swift */; };
+		7F73993625E4F82C00BACB14 /* ConcenrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F73993525E4F82C00BACB14 /* ConcenrationGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7F65E2FA25E40C57008451FE /* ConcentrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcentrationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F65E2FE25E40C57008451FE /* ConcentrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationUITests.swift; sourceTree = "<group>"; };
 		7F65E30025E40C57008451FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F73993025E4F6D500BACB14 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		7F73993525E4F82C00BACB14 /* ConcenrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcenrationGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				7F65E2DC25E40C54008451FE /* AppDelegate.swift */,
 				7F65E2DE25E40C54008451FE /* SceneDelegate.swift */,
 				7F65E2E025E40C54008451FE /* ViewController.swift */,
+				7F73993025E4F6D500BACB14 /* Card.swift */,
+				7F73993525E4F82C00BACB14 /* ConcenrationGame.swift */,
 				7F65E2E225E40C54008451FE /* Main.storyboard */,
 				7F65E2E525E40C56008451FE /* Assets.xcassets */,
 				7F65E2E725E40C56008451FE /* LaunchScreen.storyboard */,
@@ -261,6 +267,8 @@
 				7F65E2E125E40C54008451FE /* ViewController.swift in Sources */,
 				7F65E2DD25E40C54008451FE /* AppDelegate.swift in Sources */,
 				7F65E2DF25E40C54008451FE /* SceneDelegate.swift in Sources */,
+				7F73993625E4F82C00BACB14 /* ConcenrationGame.swift in Sources */,
+				7F73993125E4F6D500BACB14 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
