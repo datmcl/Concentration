@@ -19,16 +19,21 @@ extension String{
 
 class ViewController: UIViewController {
     
-    lazy var game = ConcentrationGame(numberOfPairs:(btnCollection.count + 1) / 2)
+    private lazy var game = ConcentrationGame(numberOfPairs: numberOfPairs)
+    
+// Using getter
+    var numberOfPairs: Int {
+        return (btnCollection.count + 1) / 2
+    }
 
 //  Add number of taps on change:
-    var taps = 0 {
+    private(set) var taps = 0 {
         didSet{
             tapsLabel.text = "Taps: \(taps)"
         }
     }
 
-    func emojiIdentifier(for card: Card) -> String {
+    private func emojiIdentifier(for card: Card) -> String {
         if emojiDictionary[card.identifier] == nil {
             let randomIndex = Int(arc4random_uniform(UInt32(emojiCollection.count)))
             emojiDictionary[card.identifier] = emojiCollection.remove(at: randomIndex)
@@ -36,7 +41,7 @@ class ViewController: UIViewController {
         return emojiDictionary[card.identifier] ?? "?"
     }
     
-    func updateViewFromModel() {
+    private func updateViewFromModel() {
         for index in btnCollection.indices {
             let btn = btnCollection[index]
             let card = game.cards[index]
@@ -50,14 +55,14 @@ class ViewController: UIViewController {
         }
     }
     
-    var emojiDictionary = [Int: String]()
+    private var emojiDictionary = [Int: String]()
     
-    var emojiCollection = ["😺", "👾", "👻", "🦔", "🐝", "🐱", "🦊", "🦁", "🐭", "🐨", "🦉", "🐺"]
+    private var emojiCollection = ["😺", "👾", "👻", "🦔", "🐝", "🐱", "🦊", "🦁", "🐭", "🐨", "🦉", "🐺"]
     
-    @IBOutlet weak var tapsLabel: UILabel!
-    @IBOutlet var btnCollection: [UIButton]!
+    @IBOutlet private weak var tapsLabel: UILabel!
+    @IBOutlet private var btnCollection: [UIButton]!
     
-    @IBAction func btnAction(_ sender: UIButton) {
+    @IBAction private func btnAction(_ sender: UIButton) {
         taps += 1
 //      If value exist:
         if let btnIndex = btnCollection.firstIndex(of: sender) {
