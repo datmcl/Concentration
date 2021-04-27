@@ -34,10 +34,10 @@ class ViewController: UIViewController {
     }
 
     private func emojiIdentifier(for card: Card) -> String {
-        if emojiDictionary[card.identifier] == nil {
-            emojiDictionary[card.identifier] = emojiCollection.remove(at: emojiCollection.count.arc4randomExtension)
+        if emojiDictionary[card] == nil {
+            emojiDictionary[card] = emojiCollection.remove(at: emojiCollection.count.arc4randomExtension)
         }
-        return emojiDictionary[card.identifier] ?? "?"
+        return emojiDictionary[card] ?? "?"
     }
     
     private func updateViewFromModel() {
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private var emojiDictionary = [Int: String]()
+    private var emojiDictionary = [Card: String]()
     
     private var emojiCollection = ["😺", "👾", "👻", "🦔", "🐝", "🐱", "🦊", "🦁", "🐭", "🐨", "🦉", "🐺"]
     
