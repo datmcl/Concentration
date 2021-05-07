@@ -35,7 +35,8 @@ class ViewController: UIViewController {
 
     private func emojiIdentifier(for card: Card) -> String {
         if emojiDictionary[card] == nil {
-            emojiDictionary[card] = emojiCollection.remove(at: emojiCollection.count.arc4randomExtension)
+            let randomStringIndex = emojiCollection.index(emojiCollection.startIndex, offsetBy: emojiCollection.count.arc4randomExtension)
+            emojiDictionary[card] = String(emojiCollection.remove(at: randomStringIndex))
         }
         return emojiDictionary[card] ?? "?"
     }
@@ -56,7 +57,8 @@ class ViewController: UIViewController {
     
     private var emojiDictionary = [Card: String]()
     
-    private var emojiCollection = ["😺", "👾", "👻", "🦔", "🐝", "🐱", "🦊", "🦁", "🐭", "🐨", "🦉", "🐺"]
+//    private var emojiCollection = ["😺", "👾", "👻", "🦔", "🐝", "🐱", "🦊", "🦁", "🐭", "🐨", "🦉", "🐺"]
+    private var emojiCollection = "😺👾👻🦔🐝🐱🦊🦁🐭🐨🦉🐺"
     
     @IBOutlet private weak var tapsLabel: UILabel!
     @IBOutlet private var btnCollection: [UIButton]!
