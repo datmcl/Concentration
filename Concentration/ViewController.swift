@@ -26,10 +26,19 @@ class ViewController: UIViewController {
         return (btnCollection.count + 1) / 2
     }
 
+    private func updateTouches() {
+            let attributes: [NSAttributedString.Key: Any] = [
+                .strokeColor: UIColor.gray,
+                .strokeWidth: 8.0
+            ]
+            let attributedString = NSAttributedString(string: "Taps: \(taps)", attributes: attributes)
+            tapsLabel.attributedText = attributedString
+    }
+    
 //  Add number of taps on change:
     private(set) var taps = 0 {
         didSet{
-            tapsLabel.text = "Taps: \(taps)"
+            updateTouches()
         }
     }
 
@@ -60,7 +69,11 @@ class ViewController: UIViewController {
 //    private var emojiCollection = ["😺", "👾", "👻", "🦔", "🐝", "🐱", "🦊", "🦁", "🐭", "🐨", "🦉", "🐺"]
     private var emojiCollection = "😺👾👻🦔🐝🐱🦊🦁🐭🐨🦉🐺"
     
-    @IBOutlet private weak var tapsLabel: UILabel!
+    @IBOutlet private weak var tapsLabel: UILabel! {
+        didSet{
+            updateTouches()
+        }
+    }
     @IBOutlet private var btnCollection: [UIButton]!
     
     @IBAction private func btnAction(_ sender: UIButton) {
